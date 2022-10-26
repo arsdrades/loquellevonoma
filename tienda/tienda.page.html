@@ -1,0 +1,233 @@
+<ion-header>
+  <ion-toolbar ion-padding color="primary">     
+    <div style="margin-left: 40%;">
+      <img height="40px" class="ion-text-center"  src="assets/img/logo-inverted.svg"/>
+    </div>
+    
+    <ion-button id="open-modal" color="tertiary" class="ion-padding-end" slot="end"><ion-icon   name="cart-outline"></ion-icon></ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-searchbar show-clear-button="focus" value="Busca un Copetito"></ion-searchbar>
+  <ion-title class="ion-padding">Piscos</ion-title>
+  <ion-grid>
+    <ion-row>
+  <ion-slides>
+    <ion-col>
+      <ion-slide>
+        <ion-card>
+          <img src="assets/img/piscomalpaso.jpg"/>
+        <ion-card-header>
+          <ion-label color="dark">Pisco Mal Paso</ion-label>
+          <ion-card-subtitle> Pa curarse caleta </ion-card-subtitle>
+        </ion-card-header>
+        <ion-button fill="outline">Agregar</ion-button>
+      </ion-card>
+      </ion-slide>
+    </ion-col>
+    <ion-col>
+      <ion-slide>
+        <ion-card>
+          <img src="assets/img/piscomalpaso.jpg"/>
+        <ion-card-header>
+          <ion-label color="dark">Pisco Mal Paso</ion-label>
+          <ion-card-subtitle> Pa curarse caleta </ion-card-subtitle>
+        </ion-card-header>
+        <ion-button fill="outline">Agregar</ion-button>
+      </ion-card>
+      </ion-slide>
+    </ion-col>
+    <ion-col>
+      <ion-slide>
+        <ion-card>
+          <img src="assets/img/piscomalpaso.jpg"/>
+        <ion-card-header>
+          <ion-label color="dark">Pisco Mal Paso</ion-label>
+          <ion-card-subtitle> Pa curarse caleta </ion-card-subtitle>
+        </ion-card-header>
+        <ion-button fill="outline">Agregar</ion-button>
+      </ion-card>
+      </ion-slide>
+    </ion-col>
+    <ion-col>
+      <ion-slide>
+        <ion-card>
+          <img src="assets/img/piscomalpaso.jpg"/>
+        <ion-card-header>
+          <ion-label color="dark">Pisco Mal Paso</ion-label>
+          <ion-card-subtitle> Pa curarse caleta </ion-card-subtitle>
+        </ion-card-header>
+        <ion-button fill="outline">Agregar</ion-button>
+      </ion-card>
+      </ion-slide>
+    </ion-col>
+  <ion-col>
+    <ion-slide>
+      <ion-card>
+        <img src="assets/img/piscomalpaso.jpg"/>
+      <ion-card-header>
+        <ion-label color="dark">Pisco Mal Paso</ion-label>
+        <ion-card-subtitle> Pa curarse caleta </ion-card-subtitle>
+      </ion-card-header>
+      <ion-button fill="outline">Agregar</ion-button>
+    </ion-card>
+    </ion-slide>
+  </ion-col>
+  </ion-slides>
+</ion-row>
+</ion-grid>
+
+
+<ion-title class="ion-padding">Cervezas</ion-title>
+<ion-grid>
+  <ion-row>
+<ion-slides>
+  <ion-col>
+    <ion-slide>
+      <ion-card>
+        <img src="assets/img/piscomalpaso.jpg"/>
+      <ion-card-header>
+        <ion-label color="dark">Pisco Mal Paso</ion-label>
+        <ion-card-subtitle> Pa curarse caleta </ion-card-subtitle>
+      </ion-card-header>
+      <ion-button fill="outline">Agregar</ion-button>
+    </ion-card>
+    </ion-slide>
+  </ion-col>
+  <ion-col>
+    <ion-slide>
+      <ion-card>
+        <img src="assets/img/piscomalpaso.jpg"/>
+      <ion-card-header>
+        <ion-label color="dark">Pisco Mal Paso</ion-label>
+        <ion-card-subtitle> Pa curarse caleta </ion-card-subtitle>
+      </ion-card-header>
+      <ion-button fill="outline">Agregar</ion-button>
+    </ion-card>
+    </ion-slide>
+  </ion-col>
+  <ion-col>
+    <ion-slide>
+      <ion-card>
+        <img src="assets/img/piscomalpaso.jpg"/>
+      <ion-card-header>
+        <ion-label color="dark">Pisco Mal Paso</ion-label>
+        <ion-card-subtitle> Pa curarse caleta </ion-card-subtitle>
+      </ion-card-header>
+      <ion-button fill="outline">Agregar</ion-button>
+    </ion-card>
+    </ion-slide>
+  </ion-col>
+  <ion-col>
+    <ion-slide>
+      <ion-card>
+        <img src="assets/img/piscomalpaso.jpg"/>
+      <ion-card-header>
+        <ion-label color="dark">Pisco Mal Paso</ion-label>
+        <ion-card-subtitle> Pa curarse caleta </ion-card-subtitle>
+      </ion-card-header>
+      <ion-button fill="outline">Agregar</ion-button>
+    </ion-card>
+    </ion-slide>
+  </ion-col>
+<ion-col>
+  <ion-slide>
+    <ion-card>
+      <img src="assets/img/piscomalpaso.jpg"/>
+    <ion-card-header>
+      <ion-label color="dark">Pisco Mal Paso</ion-label>
+      <ion-card-subtitle> Pa curarse caleta </ion-card-subtitle>
+    </ion-card-header>
+    <ion-button fill="outline">Agregar</ion-button>
+  </ion-card>
+  </ion-slide>
+</ion-col>
+</ion-slides>
+</ion-row>
+</ion-grid>
+</ion-content>
+
+
+<!--MODAL-->
+
+<ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+  <ng-template>
+    <ion-header>
+      
+      <ion-toolbar color="primary">
+        <ion-title>Mi Pedido</ion-title>
+        <ion-buttons slot="start">
+          <ion-button  (click)="cancel()"><ion-icon name="arrow-back-outline"></ion-icon></ion-button>
+        </ion-buttons>
+        <ion-title>
+          
+        </ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="confirm()" [strong]="true"></ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content  class="">
+      <ion-card>
+
+
+    <!--UBICACION ACTUAL-->
+      <ion-list>
+
+    <!--PRIMERA DIRECCION-->
+        <ion-item >
+          <ion-badge slot="start">1</ion-badge>
+          <img height="50px" src="assets/img/piscomalpaso.jpg"/>
+          <ion-label>
+            <h4>Pisco Mal Paso</h4>
+            <p>18.700 CLP</p>
+          </ion-label>         
+        </ion-item>
+    <!--SEGUNDA DIRECCION-->
+    <ion-item >
+      <ion-badge slot="start">1</ion-badge>
+      <img height="50px" src="assets/img/piscomalpaso.jpg"/>
+      <ion-label>
+        <h4>Pisco Mal Paso</h4>
+        <p>18.700 CLP</p>
+      </ion-label>         
+    </ion-item>
+    <!--TERCERA DIRECCION-->
+    <ion-item >
+      <ion-badge slot="start">1</ion-badge>
+      <img height="50px" src="assets/img/piscomalpaso.jpg"/>
+      <ion-label>
+        <h4>Pisco Mal Paso</h4>
+        <p>18.700 CLP</p>
+      </ion-label>         
+    </ion-item>
+    <!--CUARTA DIRECCION-->
+    <ion-item >
+      <ion-badge slot="start">1</ion-badge>
+      <img height="50px" src="assets/img/piscomalpaso.jpg"/>
+      <ion-label>
+        <h4>Pisco Mal Paso</h4>
+        <p>18.700 CLP</p>
+      </ion-label>         
+    </ion-item>
+    <!--QUINTA DIRECCION-->
+    <ion-item >
+      <ion-badge slot="start">1</ion-badge>
+      <img height="50px" src="assets/img/piscomalpaso.jpg"/>
+      <ion-label>
+        <h4>Pisco Mal Paso</h4>
+        <p>18.700 CLP</p>
+      </ion-label>         
+    </ion-item>
+      </ion-list>
+    <!--// SECCION DE DIRECCIONES-->
+    </ion-card>
+    <div class="ion-text-center">
+      <ion-button  color="primary" fill="solid">Pagar</ion-button>
+    </div>
+    </ion-content>
+
+  </ng-template>
+  
+</ion-modal>
